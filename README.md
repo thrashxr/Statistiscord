@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Statistiscord
+
+Welcome to Statistiscord
+
+## About The Statistiscord
+
+A Simple Interface to Display User Data from Discord.js on a Website Using Next.js and Tailwind CSS
+
+Statistiscord is a simple interface that utilizes Discord.js to fetch user data and displays it on a website built with Next.js and Tailwind CSS. It provides a user-friendly way to visualize and analyze Discord user information.
+
+Key Features:
+
+1. Discord.js Integration: Seamlessly retrieves user data from Discord using the Discord.js library.
+
+2. Next.js Framework: Leverages the power of Next.js for server-side rendering and static site generation.
+
+3. Tailwind CSS Styling: Employs Tailwind CSS for rapid and responsive styling of the web interface.
+
+Benefits:
+
+1. Effortless Data Visualization: Simplifies the process of displaying Discord user data in a clear and organized manner.
+
+2. Enhanced User Experience: Provides a user-friendly interface for interacting with Discord user information.
+
+3. Tailwind CSS Advantages: Enhances the look and feel of the web interface with Tailwind CSS's utility-first approach.
+
+
+Overall, Statistiscord serves as a valuable tool for anyone seeking to effectively display and analyze Discord user data.
+
+
+### Built With
+
+* Next.js
+* Tailwindcss
+* Discord.js
 
 ## Getting Started
 
-First, run the development server:
+You can see how to use it by following the steps.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installation:
+
+1. Clone the repository.
+2. Install the dependencies:
+
+``` bash
+npm install || yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To configure Statistiscord, follow these steps:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. Create a .env.local file:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+In the root directory of your Statistiscord project, create a file named .env.local.
 
-## Learn More
+2. Fill in the environment variables:
 
-To learn more about Next.js, take a look at the following resources:
+Open the .env.local file and add the following lines, replacing the placeholder values with your actual information:
+```
+// .env.local
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+// Discord Bot Token
+BOT_TOKEN=your_bot_token_here
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+// Discord User ID
+USER_ID=your_discord_user_id_here
 
-## Deploy on Vercel
+// Discord Guild ID
+GUILD_ID=your_discord_guild_id_here
+```
+3. Obtain Discord credentials:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ * Navigate to https://discord.com/developers
+ * Create a new bot application.
+ * Copy the bot token from the "Bot" section.
+ * Find your Discord user ID by opening your Discord profile settings and copying the ID from the URL.
+ * Find your Discord guild ID by opening the "Server Settings" for the guild you want to use and copying the ID from the URL.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Replace placeholder values:
+
+In the .env.local file, replace with the actual values you obtained.
+```
+your_bot_token_here, 
+your_discord_user_id_here,
+your_discord_guild_id_here
+```
+
+5. Save the `.env.local` file:
+
+Save the `.env.local` file.
+
+Additional Notes:
+
+The `.env.local` file should not be committed to your version control system, as it contains sensitive information.
+Make sure you have the necessary permissions to access the Discord user and guild data you want to display.
+
+Running the application:
+
+1. Start the development server:
+
+```
+npm run dev || yarn dev
+```
+2. Open your browser and go to `localhost:/3000`
+
+
+Done!
