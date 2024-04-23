@@ -1,5 +1,7 @@
 # Welcome to Statistiscord
 
+[Click for demo](https://thrasher.fun/)
+
 ## About The Statistiscord
 
 A Simple Interface to Display User Data from Discord.js on a Website Using Next.js and Tailwind CSS
