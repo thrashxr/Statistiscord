@@ -1,13 +1,10 @@
-
-# Statistiscord
-
-Welcome to Statistiscord
+# Welcome to Statistiscord
 
 ## About The Statistiscord
 
 A Simple Interface to Display User Data from Discord.js on a Website Using Next.js and Tailwind CSS
 
-Statistiscord is a simple interface that utilizes Discord.js to fetch user data and displays it on a website built with Next.js and Tailwind CSS. It provides a user-friendly way to visualize and analyze Discord user information.
+**Statistiscord** is a simple interface that utilizes Discord.js to fetch user data and displays it on a website built with Next.js and Tailwind CSS. It provides a user-friendly way to visualize and analyze Discord user information.
 
 Key Features:
 
@@ -26,7 +23,7 @@ Benefits:
 3. Tailwind CSS Advantages: Enhances the look and feel of the web interface with Tailwind CSS's utility-first approach.
 
 
-Overall, Statistiscord serves as a valuable tool for anyone seeking to effectively display and analyze Discord user data.
+Overall, **Statistiscord** serves as a valuable tool for anyone seeking to effectively display and analyze Discord user data.
 
 
 ### Built With
@@ -48,11 +45,11 @@ You can see how to use it by following the steps.
 npm install || yarn install
 ```
 
-To configure Statistiscord, follow these steps:
+To configure **Statistiscord**, follow these steps:
 
 1. Create a .env.local file:
 
-In the root directory of your Statistiscord project, create a file named .env.local.
+In the root directory of your **Statistiscord** project, create a file named .env.local.
 
 2. Fill in the environment variables:
 
