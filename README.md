@@ -1,11 +1,11 @@
 <p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/6295/6295417.png" width="100" />
+  <img src="https://i.imgur.com/wFGgvPe.png" width="500" />
 </p>
 <p align="center">
     <h1 align="center">STATISTISCORD</h1>
 </p>
 <p align="center">
-    <em><code>► INSERT-TEXT-HERE</code></em>
+    <em>Welcome to STATISTISCORD</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/thrashxr/Statistiscord?style=flat&color=0080ff" alt="license">
@@ -28,18 +28,18 @@
 
 ##  Quick Links
 
-> - [ Overview](#-overview)
-> - [ Features](#-features)
-> - [ Repository Structure](#-repository-structure)
-> - [ Modules](#-modules)
-> - [ Getting Started](#-getting-started)
->   - [ Installation](#-installation)
->   - [ Running Statistiscord](#-running-Statistiscord)
->   - [ Tests](#-tests)
-> - [ Project Roadmap](#-project-roadmap)
-> - [ Contributing](#-contributing)
-> - [ License](#-license)
-> - [ Acknowledgments](#-acknowledgments)
+> - [ Overview](#overview)
+> - [ Features](#features)
+> - [ Repository Structure](#repository-structure)
+> - [ Modules](#modules)
+> - [ Getting Started](#getting-started)
+>   - [ Installation](#installation)
+>   - [ Running Statistiscord](#running-Statistiscord)
+>   - [ Tests](#tests)
+> - [ Project Roadmap](#project-roadmap)
+> - [ Contributing](#contributing)
+> - [ License](#license)
+> - [ Acknowledgments](#acknowledgments)
 
 ---
 
