@@ -22,15 +22,13 @@ Benefits:
 
 3. Tailwind CSS Advantages: Enhances the look and feel of the web interface with Tailwind CSS's utility-first approach.
 
-
 Overall, **Statistiscord** serves as a valuable tool for anyone seeking to effectively display and analyze Discord user data.
-
 
 ### Built With
 
-* Next.js
-* Tailwindcss
-* Discord.js
+-  Next.js
+-  Tailwindcss
+-  Discord.js
 
 ## Getting Started
 
@@ -41,7 +39,7 @@ You can see how to use it by following the steps.
 1. Clone the repository.
 2. Install the dependencies:
 
-``` bash
+```bash
 npm install || yarn install
 ```
 
@@ -54,6 +52,7 @@ In the root directory of your **Statistiscord** project, create a file named .en
 2. Fill in the environment variables:
 
 Open the .env.local file and add the following lines, replacing the placeholder values with your actual information:
+
 ```
 // .env.local
 
@@ -66,19 +65,21 @@ USER_ID=your_discord_user_id_here
 // Discord Guild ID
 GUILD_ID=your_discord_guild_id_here
 ```
+
 3. Obtain Discord credentials:
 
- * Navigate to https://discord.com/developers
- * Create a new bot application.
- * Copy the bot token from the "Bot" section.
- * Find your Discord user ID by opening your Discord profile settings and copying the ID from the URL.
- * Find your Discord guild ID by opening the "Server Settings" for the guild you want to use and copying the ID from the URL.
+-  Navigate to https://discord.com/developers
+-  Create a new bot application.
+-  Copy the bot token from the "Bot" section.
+-  Find your Discord user ID by opening your Discord profile settings and copying the ID from the URL.
+-  Find your Discord guild ID by opening the "Server Settings" for the guild you want to use and copying the ID from the URL.
 
 4. Replace placeholder values:
 
 In the .env.local file, replace with the actual values you obtained.
+
 ```
-your_bot_token_here, 
+your_bot_token_here,
 your_discord_user_id_here,
 your_discord_guild_id_here
 ```
@@ -99,7 +100,7 @@ Running the application:
 ```
 npm run dev || yarn dev
 ```
-2. Open your browser and go to `localhost:/3000`
 
+2. Open your browser and go to `localhost:/3000`
 
 Done!

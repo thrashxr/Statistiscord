@@ -19,27 +19,23 @@ export default function AboutMe() {
          <>
             <div className="flex-1 justify-center items-center ">
                <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-400">
-                  {/* Arka plan rengini gri yaptık*/}
-                  <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" /> {/* Avatar iskeleti */}
+                  <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" />
                   <div className="mt-4 flex flex-col items-center">
-                     <Skeleton width={150} height={20} /> {/* Kullanıcı adı  iskeleti */}
-                     <Skeleton width={100} height={15} className="mt-2" /> {/* Kullanıcı ID iskeleti */}
-                     <Skeleton width={200} height={15} className="mt-2" /> {/* Biyografi iskeleti */}
+                     <Skeleton width={150} height={20} />
+                     <Skeleton width={100} height={15} className="mt-2" />
+                     <Skeleton width={200} height={15} className="mt-2" />
                   </div>
-                  {/* ... diğer kısımlar */}
                </div>
             </div>
          </>
       );
    }
-
-   //console.log(userData);
    return (
       <>
          <div className="flex-1 justify-center items-center">
             <div className="relative flex flex-col items-start rounded-md w-[400px] mx-auto p-4 bg-gray-900 bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none">
                <div className="flex flex-col justify-center items-center">
-                  <p className="text-md font-bold text-navy-700 dark:text-white">Aktiviteler</p>
+                  <p className="text-md font-bold text-navy-700 dark:text-white">Activities</p>
                </div>
                <div className="mt-6 mb-3 flex flex-col gap-4 md:flex-wrap md:flex-row">
                   {userData.activity && userData.activity.length > 0 ? (
@@ -82,7 +78,7 @@ export default function AboutMe() {
                   ) : (
                      <div className="flex flex-col justify-center items-center text-white">
                         <p className="text-lg">
-                           <b>{userData.username}</b> kullanıcısının herhangi bir aktivitesi yok.
+                           The user <b>{userData.username}</b> has no activity.
                         </p>
                      </div>
                   )}

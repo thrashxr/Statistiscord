@@ -16,7 +16,6 @@ export default function RootLayout({ children }) {
             <meta name="description" content={metadata.description} />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            {/* Open Graph & Twitter Tags (Sosyal medya paylaşım optimizasyonu) */}
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://thrasher.fun" />
             <meta property="og:title" content={metadata.title} />
@@ -29,7 +28,6 @@ export default function RootLayout({ children }) {
             <meta property="twitter:description" content={metadata.description} />
             <meta property="twitter:image" content="https://twitter.com/thrasherflu/header_photo" />
 
-            {/* Favicon */}
             <link rel="icon" href="/favicon.png" />
          </head>
          <body className={`bg-gray-900 ${inter.className}`}>{children}</body>

@@ -29,12 +29,11 @@ export default async function handler(req, res) {
       await client.login(process.env.BOT_TOKEN);
       const guildId = process.env.GUILD_ID;
       const userId = process.env.USER_ID;
-      const user = await client.users.fetch(userId, { force: true }); // Kendi kullanıcı ID'nizi girin
+      const user = await client.users.fetch(userId, { force: true });
       const guild = await client.guilds.fetch(guildId);
       const member = await guild.members.fetch(userId);
       const filterOutCustomStatus = (activity) => activity.type !== ActivityType.Custom;
 
-      //console.log(member);
       if (member) {
          const userData = {
             avatar: user.avatarURL({ dynamic: true, size: 2048 }),
@@ -43,34 +42,32 @@ export default async function handler(req, res) {
             username: user.username,
             accentColor: member.accentColor,
             id: member.id,
-            status: member.presence?.status ?? 'offline', // Aktiflik durumu
+            status: member.presence?.status ?? 'offline',
             since: user.createdAt,
             activity: member.presence
-               ? member.presence.activities
-                    .filter(filterOutCustomStatus) // Custom status'leri filtreler
-                    .map((activity) => ({
-                       name: activity.name.replace(/\s\(\d+\)/, ''),
-                       type: activity.type,
-                       details: activity.details,
-                       state: activity.state,
-                       startedAt: activity.timestamps ? moment(activity.timestamps.start).format('LT') : null,
-                       assets: activity.assets
-                          ? {
-                               largeImageURL: activity.assets.largeImageURL({ size: 2048 }),
-                               smallImageURL: activity.assets.smallImageURL({ size: 2048 }),
-                            }
-                          : null,
-                    }))
+               ? member.presence.activities.filter(filterOutCustomStatus).map((activity) => ({
+                    name: activity.name.replace(/\s\(\d+\)/, ''),
+                    type: activity.type,
+                    details: activity.details,
+                    state: activity.state,
+                    startedAt: activity.timestamps ? moment(activity.timestamps.start).format('LT') : null,
+                    assets: activity.assets
+                       ? {
+                            largeImageURL: activity.assets.largeImageURL({ size: 2048 }),
+                            smallImageURL: activity.assets.smallImageURL({ size: 2048 }),
+                         }
+                       : null,
+                 }))
                : [],
          };
 
          res.status(200).json(userData);
       } else {
-         res.status(404).json({ message: 'Kullanıcı bulunamadı.' });
+         res.status(404).json({ message: 'User not found.' });
       }
    } catch (error) {
       console.error(error);
-      res.status(500).json({ message: 'Sunucu hatası.' });
+      res.status(500).json({ message: 'Server error.' });
    } finally {
       await client.destroy();
    }

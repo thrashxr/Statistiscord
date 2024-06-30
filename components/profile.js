@@ -23,28 +23,25 @@ export default function Profile() {
          <>
             <div className="flex-1 justify-center items-center ">
                <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-400">
-                  {/* Arka plan rengini gri yaptık*/}
-                  <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" /> {/* Avatar iskeleti */}
+                  <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" />
                   <div className="mt-4 flex flex-col items-center">
-                     <Skeleton width={150} height={20} /> {/* Kullanıcı adı  iskeleti */}
-                     <Skeleton width={100} height={15} className="mt-2" /> {/* Kullanıcı ID iskeleti */}
-                     <Skeleton width={200} height={15} className="mt-2" /> {/* Biyografi iskeleti */}
+                     <Skeleton width={150} height={20} />
+                     <Skeleton width={100} height={15} className="mt-2" />
+                     <Skeleton width={200} height={15} className="mt-2" />
                   </div>
-                  {/* ... diğer kısımlar */}
                </div>
             </div>
          </>
       );
    }
    const statusColors = {
-      online: 'bg-green-400', // Yeşil
-      idle: 'bg-yellow-500', // Sarı
-      dnd: 'bg-red-500', // Kırmızı
-      offline: 'bg-gray-500', // Gri
+      online: 'bg-green-400',
+      idle: 'bg-yellow-500',
+      dnd: 'bg-red-500',
+      offline: 'bg-gray-500',
    };
-   const statusColor = statusColors[userData.status] || 'bg-gray-500'; // Bilinmeyen durum için gri
-   //const onlineStatusColor = userData.status === 'offline' ? 'bg-gray-500' : 'bg-green-400';
-   //console.log(userData);
+   const statusColor = statusColors[userData.status] || 'bg-gray-500';
+
    const dateObject = moment(userData.since);
    const readableDateTime = dateObject.locale('tr').format('LL');
    return (

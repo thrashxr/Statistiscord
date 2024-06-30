@@ -1,6 +1,5 @@
 import { FaDiscord, FaGithub } from 'react-icons/fa6';
 import { IconContext } from 'react-icons';
-//TODO: fix the x-twitter icon problem
 const socialMediaAccounts = [
    {
       name: 'Discord',
