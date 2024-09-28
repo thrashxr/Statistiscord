@@ -9,6 +9,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import socialMediaAccounts from '@/utils/links';
 import { Tooltip } from 'react-tooltip';
+
 export default function Profile() {
    const [userData, setUserData] = useState(null);
 
@@ -21,7 +22,7 @@ export default function Profile() {
    if (!userData) {
       return (
          <>
-            <div className="flex-1 justify-center items-center ">
+            <div className="flex-1 justify-center items-center">
                <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-400">
                   <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" />
                   <div className="mt-4 flex flex-col items-center">
@@ -34,6 +35,7 @@ export default function Profile() {
          </>
       );
    }
+
    const statusColors = {
       online: 'bg-green-400',
       idle: 'bg-yellow-500',
@@ -44,24 +46,19 @@ export default function Profile() {
 
    const dateObject = moment(userData.since);
    const readableDateTime = dateObject.locale('tr').format('LL');
+
    return (
       <>
-         <div className="flex-1 justify-center items-center ">
-            <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-900 bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none">
+         <div className="flex justify-center items-start space-x-6 mt-6">
+            <div className="flex flex-col items-center rounded-md w-[400px] p-4 bg-gray-900 bg-clip-border shadow-3xl shadow-shadow-500 dark:!bg-navy-800 dark:text-white dark:!shadow-none">
                <div className="relative flex h-32 w-full justify-center rounded-md bg-cover">
-                  <Image
-                     src={userData.banner ? userData.banner : <Image src="/no-data.png" alt="alt" width={300} height={300} />}
-                     width={300}
-                     height={300}
-                     className="absolute flex h-32 w-full justify-center rounded-md bg-cover"
-                  />
-
+                  <Image src={userData.banner ? userData.banner : '/no-data.png'} width={300} height={300} className="absolute flex h-32 w-full justify-center rounded-md bg-cover" />
                   <div className="absolute -bottom-12 flex h-[87px] w-[87px] items-center justify-center rounded-md border-[4px] border-gray-900 dark:!border-navy-700">
                      <Image
                         width={300}
                         height={300}
                         className="w-full h-full rounded-md"
-                        src={userData.avatar ? userData.avatar : <Image src="https://i.pinimg.com/originals/ce/5c/ee/ce5cee4b4eab5058e858cbf8b65c39a4.png" alt="alt" width={300} height={300} />}
+                        src={userData.avatar ? userData.avatar : 'https://i.pinimg.com/originals/ce/5c/ee/ce5cee4b4eab5058e858cbf8b65c39a4.png'}
                         alt=""
                      />
                      <span
@@ -81,7 +78,6 @@ export default function Profile() {
                <div className="mt-6 mb-3 flex gap-14 md:!gap-14">
                   <div className="flex flex-col items-center justify-center">
                      <p className="text-md font-bold text-navy-700 dark:text-white">{readableDateTime}</p>
-
                      <p className="text-sm font-normal text-gray-600">created at</p>
                   </div>
                </div>

@@ -18,7 +18,7 @@ export default function AboutMe() {
       return (
          <>
             <div className="flex-1 justify-center items-center ">
-               <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-400">
+               <div className="relative flex flex-col items-center rounded-md w-[400px] mx-auto p-4 bg-gray-900">
                   <Skeleton className="w-[87px] h-[87px] rounded-md mb-4" />
                   <div className="mt-4 flex flex-col items-center">
                      <Skeleton width={150} height={20} />
